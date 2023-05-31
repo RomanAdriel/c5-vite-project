@@ -1,6 +1,7 @@
 import './App.css'
-import React from 'react'
-import Card from './Components/Card';
+import React, { useState } from 'react'
+import Card from './Components/Card/Card';
+import List from './Components/List/List';
 
 /* Array de ciudades que debemos utilizar en la actividad */
 const cities = [
@@ -78,11 +79,16 @@ const cities = [
 
 function App() {
 
+    const [addedCity, setAddedCity] = useState([]);
+
   return (
     <div className="App">
       <>
         <div className='horizontal-container'>
-          {cities.map((city) => <Card key={city.id} city={city}/>)}
+          {cities.map((city) => <Card key={city.id} cardContent={city} setCardContent={setAddedCity}/>)}
+        </div>
+        <div>
+            <List listItems={addedCity}/>
         </div>
       </>
     </div>
