@@ -1,39 +1,92 @@
-import Card from "./Components/Card";
 import './App.css'
+import React from 'react'
+import Card from './Components/Card';
 
-let productos = [
-    {
-        "id": 0,
-        "nombre": "Macbook Air 13 Chip M1 256gb",
-        "imagen": "https://m.media-amazon.com/images/I/41O807iqbCL._AC_SX522_.jpg",
-        "precio": "$ 1499.00"
-    }, {
-        "id": 1,
-        "nombre": "Amazon Echo Dot (4a Gen.)",
-        "imagen": "https://m.media-amazon.com/images/I/714Rq4k05UL._AC_SL1000_.jpg",
-        "precio": "$ 14.99"
-    }, {
-        "id": 2,
-        "nombre": "Cámara IP Inalámbrica 360°",
-        "imagen": "https://m.media-amazon.com/images/I/51F70OM213S._AC_SL1000_.jpg",
-        "precio": "$ 39.00"
-    }, {
-        "id": 3,
-        "nombre": "CERRADURA DIGITAL INTELIGENTE FORTEZZA ZIGBEE",
-        "imagen": "https://m.media-amazon.com/images/I/51RXeqMLceL._AC_SL1500_.jpg",
-        "precio": "$ 99.00"
-    }
-]
+/* Array de ciudades que debemos utilizar en la actividad */
+const cities = [
+  {
+    id: 1,
+    country: "AR",
+    city: "Buenos Aires",
+    population: "2.890.151",
+    color: "#D7B81D"
+  },
+  {
+    id: 2,
+    country: "BRA",
+    city: "Rio de Janeiro",
+    population: "6.775.561",
+    color: "#470F69"
+  },
+  {
+    id: 3,
+    country: "AR",
+    city: "La Plata",
+    population: "643.133",
+    color: "#C37F19"
+  },
+  {
+    id: 4,
+    country: "BRA",
+    city: "Brasília",
+    population: "3.094.325",
+    color: "#97198B"
+  },
+  {
+    id: 5,
+    country: "AR",
+    city: "Córdoba",
+    population: "1.317.298",
+    color: "#ED3D48"
+  },
+  {
+    id: 6,
+    country: "BRA",
+    city: "Fortaleza",
+    population: "2.703.391",
+    color: "#2E15D0"
+  },
+  {
+    id: 7,
+    country: "AR",
+    city: "Rosario",
+    population: "1.193.605",
+    color: "#DA0C19"
+  },
+  {
+    id: 8,
+    country: "AR",
+    city: "Mendoza",
+    population: "1.200.000",
+    color: "#B94310"
+  },
+  {
+    id: 9,
+    country: "BRA",
+    city: "São Paulo",
+    population: "12.396.372",
+    color: "#A440E2"
+  },
+  {
+    id: 10,
+    country: "BRA",
+    city: "Salvador",
+    population: "2.900.319",
+    color: "#6550ED"
+  },
+];
 
 function App() {
-    return (
-        <div>
-            <h1>Productos</h1>
-            <ul>
-              {productos.map(producto => <Card key={producto.id} item={producto}/>)}
-            </ul>
+
+  return (
+    <div className="App">
+      <>
+        <div className='horizontal-container'>
+          {cities.map((city) => <Card key={city.id} city={city}/>)}
         </div>
-    );
+      </>
+    </div>
+  )
 }
 
-export default App;
+export default App

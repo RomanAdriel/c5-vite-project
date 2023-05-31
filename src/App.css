@@ -1,3 +1,4 @@
+/* Estilo predeterminado generado con el proyecto de ViteJS */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -9,7 +10,6 @@
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -41,18 +41,10 @@
   color: #888;
 }
 
-ul {
+.horizontal-container {
   display: flex;
-  justify-content: space-between;
-}
-
-img {
-  width: 100px;
-  height: auto;
-}
-
-li {
-  border: solid 2px green;
-  background-color: yellow;
-  list-style-type: none;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }

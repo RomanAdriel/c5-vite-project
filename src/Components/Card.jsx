@@ -1,13 +1,15 @@
 import React from 'react'
+import * as CardStyles from './Card.module.css'
 
-const Card = ({item}) => {
-    return (
-        <li>
-            <h2>{item.nombre}</h2>
-            <img src={item.imagen}/>
-            <h3>{item.precio}</h3>
-        </li>
-    )
+const Card = ({city}) => {
+  return (
+    <div className={CardStyles.card} style={{backgroundColor: city.color}}>
+      <h1>{city.city}</h1>
+      <h2>{city.country == "BRA" ? "Brazil" : "Argentina"}</h2>
+      <h3>{`Population: ${city.population}`}</h3>
+      <h4></h4>
+    </div>
+  )
 }
 
 export default Card
