@@ -6,7 +6,7 @@ const List = () => {
         console.log("Se montó la Lista")
         return () => {
             console.log("Se desmontó la Lista");
-            alert("Su pedido ha sido cancelado")
+            alert("Su pedido ha sido cancelado");
         }
     }, []);
 

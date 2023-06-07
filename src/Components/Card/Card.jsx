@@ -12,8 +12,6 @@ const Card = () => {
       setMostrarPedido(true);
       console.log("Se ejecutó el componentDidMount() de Card");
     }, 2000);
-    return () => clearTimeout();
-
 }, [])
 
   return (
