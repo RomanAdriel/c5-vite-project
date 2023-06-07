@@ -11,7 +11,6 @@ const Card = () => {
     setTimeout(() => {
       setMostrarPedido(true);
       console.log("Se ejecutó el componentDidMount() de Card");
-
     }, 2000);
     return () => clearTimeout();
 
@@ -20,7 +19,7 @@ const Card = () => {
   return (
     <>
     <h2>Su pedido: </h2>
-    {!mostrarPedido && <List/>}
+    {mostrarPedido && <List/>}
     <button onClick={() => setMostrarPedido(false)}>Cancelar Pedido</button>
     </>
 
